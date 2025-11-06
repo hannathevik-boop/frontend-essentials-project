@@ -1,4 +1,4 @@
-# Project Name - PRO1001 Frontend Essentials
+# Sustainable food webshop
 
 ## Project Description
 
