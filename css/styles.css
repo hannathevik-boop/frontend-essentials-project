@@ -34,9 +34,7 @@ padding-left: 45px;
 .nav-left,
 .nav-right {
   flex: 0 0 auto;
-  }
-.nav-logo {
-  margin-top: 1.5rem;
+  
 }
 /* Hamburgermeny*/
 .hamburger {
@@ -205,6 +203,7 @@ word-wrap: break-word
   text-transform: uppercase;
   color: #1B1A1E;
   z-index: 1000;
+  margin-top: 1.5rem;
 }
 
 /* Nav høyre */

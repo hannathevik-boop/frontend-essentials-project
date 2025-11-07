@@ -36,7 +36,7 @@ padding-left: 45px;
   align-items: center;
 }
 
-.nav-logo a {
+.nav-logo  {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -46,6 +46,7 @@ padding-left: 45px;
   color: #1B1A1E;
   z-index: 1000;
   margin-top: 1.5rem;
+  text-decoration: none;
 }
 .hamburger {
   display: flex;
