@@ -31,8 +31,37 @@ padding-bottom: 16px;
 padding-left: 45px;
 }
 
-.nav-left,
+/* Nav høyre */
 .nav-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+/* banner logo øverts*/
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #1B1A1E;
+  z-index: 1000;
+  margin-top: 1.5rem;
+
+}
+
+.handle-button {
+  background: #28BD6D;
+  border-radius: 100px;
+  padding: 10px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  color: black;
+  gap: 10px; 
+  display: inline-flex;
+}
+.nav-left {
   flex: 0 0 auto;
   
 }
@@ -192,36 +221,6 @@ font-family: Font Awesome 6 Pro;
 font-weight: 300;
 word-wrap: break-word
   }
-}
-/* banner logo øverts*/
-.nav-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Frank Ruhl Libre', serif;
-  font-size: 32px;
-  text-transform: uppercase;
-  color: #1B1A1E;
-  z-index: 1000;
-  margin-top: 1.5rem;
-}
-
-/* Nav høyre */
-.nav-right {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-.handle-button {
-  background: #28BD6D;
-  border-radius: 100px;
-  padding: 10px;
-  font-family: 'Arimo', sans-serif;
-  font-size: 14px;
-  color: black;
-  gap: 10px; 
-  display: inline-flex;
 }
 h1, h2, h3 {
   font-family: 'Frank Ruhl Libre', serif;
