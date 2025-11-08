@@ -15,7 +15,6 @@ body {
 img {
   max-width: 100%;
   display: block;
-  object-fit: cover;
   border-radius: 16px;
 }
 
@@ -30,12 +29,15 @@ padding-right: 45px;
 padding-bottom: 16px;
 padding-left: 45px;
 }
-.nav-left,
+
+/* Nav høyre */
 .nav-right {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
-
-.nav-logo  {
+/* banner logo øverts*/
+.nav-logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -46,6 +48,22 @@ padding-left: 45px;
   z-index: 1000;
   margin-top: 1.5rem;
   text-decoration: none;
+
+}
+
+.handle-button {
+  background: #28BD6D;
+  border-radius: 100px;
+  padding: 10px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  color: black;
+  gap: 10px; 
+  display: inline-flex;
+}
+.nav-left {
+  flex: 0 0 auto;
+  
 }
 .hamburger {
   display: flex;
@@ -71,16 +89,7 @@ padding-left: 45px;
   background-color: #1B1A1E;
   border-radius: 2px;
   transition: background-color 0.5s ease;
-}
-.handle-button {
-  background: #28BD6D;
-  border-radius: 50px;
-  padding: 10px;
-  font-family: 'Arimo', sans-serif;
-  font-size: 14px;
-  color: black;
-  gap: 10px; 
-  display: inline-flex;
+
   }
 .popover-menu {
   position: absolute;
@@ -193,6 +202,7 @@ h4 {
   font-family: 'Arimo';
   font-weight: 400;
   text-transform: uppercase;
+  padding-left: 1.5rem;
 }
 h5 {
   font-size: 24px;
@@ -232,16 +242,17 @@ h5 {
 }
 .image-wrapper {
   position: relative;
-  display: block;
+  display: inline-block;
+  
   
 }
 .image-wrapper img { 
   object-fit: cover; 
-  width: 100%; 
   height: auto; 
   border-radius: 16px; 
   width: 454px; 
   height: 432px; 
+  display: inline-block;
 }
 
 .overlay-button {
@@ -255,14 +266,23 @@ h5 {
   border-radius: 44px;
   border: none;
   cursor: pointer;
-  display: flex;
+ display: flex;
   align-items: center;
   gap: 10px;
-}
+  }
 
 .overlay-button:hover {
   background-color: #008F51;
 }
+@media (max-width: 768px) {
+  .overlay-button {
+  text-align: center; 
+  justify-content: center; 
+  display: inline; 
+  flex-direction: column; 
+  color: white; 
+  }
+} 
 .partnering-farms {
   background-color: #F7F2DE;
   padding: 90px;
@@ -288,6 +308,16 @@ h5 {
   text-transform: uppercase;
   color: #1B1A1E;
 }
+.partnering-intro h6 {
+  font-family: arimo, sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  width: 377px;
+  height: 63px;
+
+} 
 
 .map-section {
   flex: 2 1 745px;
