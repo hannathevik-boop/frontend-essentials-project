@@ -290,18 +290,17 @@ h5 {
 } 
 .partnering-farms {
   background-color: #F7F2DE;
-  padding: 0 45px;
+width: 100vw;
+  overflow-x: hidden;
   
 }
 
 .partnering-layout {
    display: flex;
   flex-wrap: nowrap;
-  gap: 2rem;
-  max-width: 1516px;
+  width: 100%;
   justify-content: space-between;
-  align-items: flex-start;
-  height: 100%
+  align-items: stretch;
 }
 
 .partnering-intro {
@@ -309,19 +308,9 @@ h5 {
   justify-content: center;
   align-items: center;         
   text-align: center;
-  flex: 0 0 450px;
-  padding-top: 10rem;
+  flex: 0 0 507px;
   border-right: 1px solid #1B1A1E;
   gap: 10px;
-}
-
-.partnering-intro h2 {
-  font-size: 36px;
-  font-family: 'Frank Ruhl Libre', serif;
-  text-transform: uppercase;
-  color: #1B1A1E;
-  width: 377px;
-  height: 63px;
 }
 .partnering-intro h6 {
   font-family: arimo, sans-serif;
