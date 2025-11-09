@@ -296,7 +296,7 @@ width: 100vw;
 }
 
 .partnering-layout {
-   display: flex;
+  display: flex;
   flex-wrap: nowrap;
   width: 100%;
   justify-content: space-between;
@@ -318,6 +318,8 @@ width: 100vw;
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
+  width: 377px;
+  height: 36px;;
 
 
 } 
@@ -473,6 +475,7 @@ Width: 345px;
   .map-section {
     justify-content: center;
     width: 100%;
+    border-top: 1px solid #1B1A1E;
   }
 
   .map-frame {
