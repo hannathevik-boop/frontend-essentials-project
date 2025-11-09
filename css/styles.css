@@ -678,6 +678,14 @@ gap: 10px;
 
 /* Responsiv justering */
 @media (max-width: 768px) {
+  .popular-produce {
+  background-color: white;
+  padding-Top: 90px;
+  padding-bottom: 90px;
+  padding-right: 37px;
+  padding-left: 37px;
+
+}
   .produce-card {
     padding: 1rem;
   }
@@ -724,11 +732,12 @@ gap: 10px;
     margin-bottom: 2rem;
   }
 
-  /* Popular Produce: slider on mobile */
+  /* Popular produce: slider på mobil */
   .slider-wrapper {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: -2rem;
+    margin-left: -1rem;
   }
 
   .slider-track {
@@ -736,7 +745,6 @@ gap: 10px;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 1rem;
-    padding-bottom: 1rem;
   }
 
   .slider-track::-webkit-scrollbar {
@@ -755,6 +763,7 @@ gap: 10px;
     font-size: 2rem;
     cursor: pointer;
     color: #0B0A08;
+    margin-top: -6rem;
   }
 
   /* Nyhetsbrev mobil */
