@@ -392,6 +392,8 @@ font-family: Frank Ruhl Libre;
 }
 .card-2 p, .card p {
  Padding-bottom: 44px;
+ padding-left: 2rem;
+ padding-right: 2rem;
   }
 .card, .card-2 {
   flex: 0 0 50%;
@@ -854,13 +856,13 @@ gap: 10px;
 }
 
 .newsletter-form button {
-  width: 50%;
+  width: 459px;
   background-color: #E1EAF0;
   color: #0B0A08;
   border: none;
   border-radius: 8px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
 }
 
