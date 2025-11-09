@@ -136,7 +136,7 @@ width: 100%;
   transform: translateX(-0.5px);
 }
 .popover-logo {
-  display: none;
+  display: flex;
   font-family: 'Frank Ruhl Libre', serif;
   font-size: 32px;
   text-transform: uppercase;
