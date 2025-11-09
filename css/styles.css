@@ -293,6 +293,7 @@ color: white;
 font-size: 75px;
 font-family: Frank Ruhl Libre;
 font-weight: 300;
+text-align: center;
 }
   .hero-subtitle {
   width: 416px;
@@ -440,7 +441,7 @@ Gap: 44px;
   height: 71px; 
   padding-left: 16px; 
   padding-right: 16px;
-  padding-top: 2rem;;
+  padding-top: 2rem;
 
 }
 
@@ -878,7 +879,6 @@ Gap: 44px;
   .newsletter-subheading {
     font-size: 28px;
     color: #fff;
-    margin-left: 2rem;
     
   }
 
