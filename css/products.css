@@ -312,7 +312,6 @@ h5 {
   flex: 0 0 450px;
   padding-top: 10rem;
   border-right: 1px solid #1B1A1E;
-  height: 100%;
   gap: 10px;
 }
 
@@ -479,7 +478,7 @@ Width: 345px;
 
   .partnering-intro {
     border-right: none;
-    border-bottom: 1px solid #1B1A1E;
+
   }
 
   .map-section {

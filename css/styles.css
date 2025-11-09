@@ -457,7 +457,6 @@ Gap: 44px;
 
 /* Left-side intro block */
 .how-intro {
-  flex: 0 0 250px;
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -479,15 +478,6 @@ Gap: 44px;
   border-left: 1px solid black;
   
 }
-.article-grid::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 100%;
-  background-color: none;
-}
 
 /* Individuell artikkel*/
 .step-article {
@@ -495,9 +485,7 @@ Gap: 44px;
   padding: 2rem 5rem 2rem 5rem;
   display: flex;
   gap: 7rem;
-  margin-bottom: 0.5rem;
   align-self: stretch;
-
 }
 .step-article:nth-child(-n+3) {
   border-bottom: 0px solid black;
