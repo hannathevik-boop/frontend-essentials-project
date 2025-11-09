@@ -37,7 +37,7 @@ width: 100%;
   padding-right: 2rem;
 }
 /* banner logo øverts*/
-.nav-logo {
+.nav-logo, .nav-logo h2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -48,7 +48,6 @@ width: 100%;
   z-index: 1000;
   margin-top: 1.5rem;
   text-decoration: none;
-
 
 }
 
@@ -187,7 +186,10 @@ h1, h2, h3 {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-
+h1 {
+  font-size: 32px;
+  color: #1B1A1E;
+}
 h2 {
   font-size: 36px;
   color: #ffff;
@@ -485,30 +487,35 @@ Width: 345px;
 }
 
 @media (max-width: 768px) {
-  .newsletter {
-    padding: 30px 20px;
-    text-align: left;
-  }
-
-  .newsletter-text {
-    width: 100%;
-  }
-
-  .form-group {
-    width: 329px;
-  }
-
-  .newsletter-form button {
-    width: 329px;
-  }
-
-  .newsletter-subheading {
-    font-size: 28px;
-    color: #fff;
+  .newsletter, .newsletter-form, .form-group {
+    padding-left: 1rem;
+    padding-right: 1rem;
     
   }
 
-  .newsletter-logo {
-    font-size: 36px;
+  .newsletter-text {
+    width: 279px;
+    font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
   }
+  .newsletter-subheading {
+    width: 279px;
+    font-size: 24px;
 }
+  .form-group {
+    width: 329px;
+    display: flex;
+height: 44px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+    
+  }
+  }
+
+  .newsletter-logo {
+    font-size: 48px;
+  }
