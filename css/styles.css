@@ -1,14 +1,11 @@
-/* === Base === */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
   font-family: 'Arimo', sans-serif;
-  background-color: #F7F2DE;
   color: #1B1A1E;
   line-height: 1.6;
   background-color: #F7F2DE;
@@ -17,18 +14,18 @@ body {
 
 img {
   max-width: 100%;
-  display: flex;
+  display: block;
 }
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   border-bottom: 1px solid #0B0A08;
-  Padding-top: 16px;
-padding-right: 45px;
+  padding-top: 16px;
 padding-bottom: 16px;
-padding-left: 45px;
+width: 100%;
 }
 
 /* Nav høyre */
@@ -36,9 +33,10 @@ padding-left: 45px;
   flex: 0 0 auto;
   display: flex;
   align-items: center;
+  padding-right: 2rem;
 }
 /* banner logo øverts*/
-.nav-logo {
+.nav-logo, .nav-logo h2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -46,8 +44,9 @@ padding-left: 45px;
   font-size: 32px;
   text-transform: uppercase;
   color: #1B1A1E;
-  z-index: 1000;
+  z-index: 9999;
   margin-top: 1.5rem;
+  text-decoration: none;
 
 }
 
@@ -65,7 +64,6 @@ padding-left: 45px;
   flex: 0 0 auto;
   
 }
-/* Hamburgermeny*/
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -77,9 +75,9 @@ padding-left: 45px;
   cursor: pointer;
   padding: 0;
   z-index: 1001;
-  color: #0B0A08;
   margin-left: 2rem;
-  }
+}
+
   .hamburger:hover {
   opacity: 0.4;
 }
@@ -169,27 +167,7 @@ word-wrap: break-word
 .menu-list a:hover {
   text-decoration: underline;
 }
-/* Skjul meny-logo som standard */
-.popover-logo {
-  display: none;
-  font-family: 'Frank Ruhl Libre', serif;
-  font-size: 32px;
-  text-transform: uppercase;
-  color: black;
-  text-align: center;
-  margin-top: 2rem;
-}
 
-/* Vis den når menyen er aktiv på mobil */
-@media (max-width: 768px) {
-  .popover-menu.active .popover-logo {
-    display: block;
-    margin-top: -2rem;
-  }
-  .main-nav.menu-open .nav-logo {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
   .popover-menu {
@@ -227,19 +205,17 @@ h1, h2, h3 {
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 1rem;
+
 }
 
 h2 {
-  font-size: 2.5rem;
   color: #1B1A1E; font-size: 36px; font-family: Arimo;
 }
 
 h3 {
-  font-size: 1.5rem;
   color: #1B1A1E; font-size: 24px; font-family: Arimo;
 }
 h4 {
-  font-size: 2.5rem;
   color: #ffffff; font-size: 36px; font-family: Arimo;
 }
 .hero-section {
