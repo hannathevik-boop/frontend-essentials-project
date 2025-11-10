@@ -298,10 +298,6 @@ h5 {
   flex-direction: column; 
   color: white; 
   }
-  .main-nav {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 } 
 .partnering-farms {
   background-color: #F7F2DE;
@@ -450,11 +446,14 @@ flex-shrink: 0;
     font-size: 1.75rem;
   }
    .main-nav {
-width: 390px;
-height: 68px;
-justify-content: space-between;
-Padding: 16px;
-     border-bottom: 100%;
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #0B0A08;
+  padding-top: 16px;
+padding-bottom: 16px;
+width: 100%;
   }
 
   .slider-track {
