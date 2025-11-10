@@ -322,7 +322,15 @@ width: 100vw;
   flex: 0 0 507px;
   border-right: 1px solid #1B1A1E;
   gap: 10px;
-  padding: 2rem;
+  padding: 3rem;
+} 
+.partnering-heading h4 {
+    display: block;
+  width: 100px;
+  box-sizing: border-box;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .map-section {
