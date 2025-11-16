@@ -232,13 +232,14 @@ h4 {
 
 .hero-img {
   width: 100%;
-  height: 100%;
+height: 1110px;
+flex-shrink: 0;
   object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 8rem;
+  top: 165px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -257,9 +258,9 @@ h4 {
 
 .vertical-line {
   width: 2px;
-  height: 208px;
+  height: 300px;
   background-color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .hero-subtitle {
@@ -272,7 +273,7 @@ h4 {
   line-height: 1.2;
 }
 @media (max-width: 768px) {
-  .hero-image {
+  .hero-img {
     height: 579px;
   }
 
@@ -308,8 +309,6 @@ line-height: normal;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  padding: 0px 5px;
-  border-bottom: 1px solid black;
 
 }
 .card-section::before {
@@ -318,7 +317,7 @@ line-height: normal;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 1px;
+  width: 0.5px;
   background-color: black;
   transform: translateX(-0.5px);
 }
@@ -344,33 +343,10 @@ font-family: Frank Ruhl Libre;
   width: 360px;
   margin: 0 auto;   
   text-align: center;
-   }
-
-/* Horisontal linje mellom på mobil */
-@media (max-width: 768px) {
-  .card-section {
-    flex-direction: column;
-  }
-  .card-2 h2, .card h2 {
-    margin-bottom: 1rem;
-    padding: 0rem;
-    max-width: 275px;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 0%;
-  }
-
-  .card-section::before {
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    width: 100%;
-    transform: translateY(-0.5px);
-  }
+   
 }
 .card-2 p, .card p {
- Padding-bottom: 44px;
+ padding-bottom: 44px;
  padding-left: 2rem;
  padding-right: 2rem;
   }
@@ -379,9 +355,9 @@ font-family: Frank Ruhl Libre;
   background-color: #fff;
   text-align: center;
   word-wrap: break-word;
-  Width: Fill (756px);
-Height: Hug (841px);
-  Padding-top: 90px;
+  width: 756px;
+height: 841px;
+  padding-top: 90px;
 padding-bottom: 90px;
 
 }
@@ -394,11 +370,62 @@ padding-bottom: 90px;
   object-fit: cover;
   margin-bottom: 44px;
 }
+.card button, .card-2 button {
+  background-color: #DC4131;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.card button:hover, .card-2 button:hover {
+  background-color: #b83226;
+}
 @media (max-width: 768px) {
   .card img, .card-2 img {
-    width: 359px;
-  height: 250px;
+    width: 100%;
+    height: 250px;
+    
+    display: block;
+    object-fit: cover;
   }
+ .card-section {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .card, .card-2 {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .card h2, .card-2 h2 {
+    font-size: 24px;
+  }
+
+  .card p, .card-2 p {
+    font-size: 16px;
+    padding: 0 1rem 2rem;
+  }
+  }
+
+  .card-section::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    transform: translateY(-0.5px);
+    outline: 1px;
+  }
+
 }
 .card button, .card-2 button {
   background-color: #DC4131;
@@ -409,20 +436,18 @@ padding-bottom: 90px;
   font-size: 1rem;
   cursor: pointer;
   margin-top: 0rem;
-  width: 320px;
+  width: 90%;
   height: 44px;
 }
 
 .card button:hover, .card-2 button:hover {
   background-color: #b83226;
 }
-
-/* === How It Works Section === */
+}
 .how-it-works {
   background-color: #F7F2DE;
-  padding: 90px 90;
-  
-  border-right: 1px solid black;
+  padding: 0rem;
+   outline: 1px solid black;
 }
 .how-intro h2 {
   font-family: arimo, sans-serif;
@@ -445,56 +470,41 @@ gap: 10px;
   width: 100%;
   justify-content: space-between;
   align-items: stretch;
-}
 
-/* Left-side intro block */
+}
 .how-intro {
   display: flex;
   justify-content: center;
   align-items: center;         
   text-align: center;
-  flex: 0 0 507px;
-  gap: 10px;
-  border-bottom: 1px solid black;
-  
+  flex: 0 0 550px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
   
 }
 
 /* høyre artikler*/
 .article-grid {
-  flex: 1;
-  display: columns;
+  flex: 1 1;
+  flex-direction: row;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
  margin: 0;
-  padding: 0;
-  gap: 4rem;
-  border-left: 1px solid black;
+  gap: 3rem;
   
 }
 
 /* Individuell artikkel*/
 .step-article {
   position: relative;
-  padding: 90px 45px 90px 45px;
+  padding-top: 3rem;
   display: flex;
   gap: 7rem;
-  align-self: stretch;
-}
-.step-article:nth-child(-n+3) {
-  border-bottom: 0px solid black;
-  width: 100%;
-}
-
-.step-article::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: black;
-  transform: translateX(-0.5px);
+  align-items: center;
+  padding-bottom: 3rem;
+  padding-left: 10rem;
+  border-top: 1px solid black;
+height: 197px;
 }
 
 .step-article h3 {
@@ -504,9 +514,10 @@ gap: 10px;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0 auto;
-text-align: center;
+text-align: left;
   width: 278px;
   white-space: nowrap;
+  padding-left: 5rem;
 }
 
 .step-article p {
@@ -515,6 +526,8 @@ text-align: center;
   display: flex;
   flex-direction: column;
   flex: 1; 
+  padding-right: 30rem;
+  padding-left: 0rem;
 }
 
 .step-article a {
@@ -531,58 +544,49 @@ text-align: center;
     gap: 0;
   }
   .how-it-works {
-    border-right: none;
-  }
-
-  .how-intro {
-    border-right: none;
-    border-bottom: 1px solid black;
-    justify-content: center;
-    padding: 0rem 0rem 2rem 0rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
+    outline: none;
   }
 
   .step-article {
   flex-direction: column;
   gap: 1rem;
-  border-left: none;
-    border-right: none;
+  border-left: 0px;
+    border-right: 0px;
+    width: 100%;
+    height: 90%;
+    padding-left: 2rem;
+    
 
    } 
  .step-wrapper {
    grid-template-columns: 0fr;
-    justify-content: flex-start;
-    border-left: hidden;
-    border-right: hidden;
+    justify-content: left;
+    border-left: 0px;
+    border-right: 0px;
    }
 
-  .step-article p {
-    max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-    overflow-x: auto;
-     }
-    .article-grid {
-  flex-direction: column;
-  gap: 1rem;
-      overflow-x: auto;
-      border-left: none;
-  }
-
   .step-article h3 {
-    font-size: 18px;
-    text-align: left;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
+  font-size: 20px;
+  font-family: Arimo;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding-right: 29rem;
+  justify-content: flex-end;
+}
+
+.step-article p {
+  flex: 1;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+}
 
   .how-intro h2 {
     font-size: 24px;
-    width: 238px;
     display: flex;
+    
     
 }
 }
@@ -653,17 +657,15 @@ text-align: center;
 
 .image-wrapper img {
   object-fit: cover;
-  width: 100%;
-  height: auto;
   border-radius: 16px;
-  width: 454px;
-  height: 432px;
+  width: 600px;
+  height: 532px;
 }
 .overlay-button {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  padding: 10px 16px;
+  padding: 12px 18px;
   font-size: 14px;
   color: white;
   background: #0B0A08;
@@ -682,14 +684,12 @@ text-align: center;
   
 }
 
-/* Responsiv justering */
 @media (max-width: 768px) {
   .popular-produce {
   background-color: white;
-  padding-Top: 90px;
+  padding-top: 90px;
   padding-bottom: 90px;
-  padding-right: 37px;
-  padding-left: 37px;
+  
 
 }
   .produce-card {
@@ -732,8 +732,8 @@ text-align: center;
   }
 
   .how-intro {
-    border-right: none;
-    border-bottom: 1px solid black;
+    border-right: 0px;
+    border-bottom: 0px;
     padding-bottom: 0rem;
     margin-bottom: 0rem;
     flex: 0 0 200px;
@@ -743,7 +743,7 @@ text-align: center;
   .slider-wrapper {
     display: flex;
     align-items: center;
-    gap: -2rem;
+    gap: 1rem;
     margin-left: -1rem;
   }
 
@@ -857,9 +857,16 @@ text-align: center;
     padding-right: 1rem;
     
   }
+  .newsletter-form,
+.form-group,
+.form-group input,
+.newsletter-form button {
+  width: 100%;
+  max-width: 459px;
+}
 
   .newsletter-text {
-    width: 279px;
+  
     font-size: 16px;
 font-style: normal;
 font-weight: 300;
@@ -867,12 +874,12 @@ line-height: normal;
 padding-left: 1rem;
   }
   .newsletter-subheading {
-    width: 279px;
+
     font-size: 24px;
     padding-left: 1rem;
 }
   .form-group {
-    width: 329px;
+  
     display: flex;
 height: 44px;
 padding: 10px;
@@ -882,7 +889,7 @@ align-self: stretch;
 padding-left: 0rem;
 }
   .newsletter-form button {
-    width: 329px;
+
     
   }
   }
