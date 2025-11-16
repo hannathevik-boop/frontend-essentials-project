@@ -1,21 +1,25 @@
 # Sustainable food webshop
 
-## Project Description
+## Prosjektbeskrivelse
 
-Describe your project and its core functionality here: what it does, what problem it solves, individual pages it consists of, and any other information you believe is relevant. Sell it!
+Farm er en bærekraftig dagligvaretjeneste som sørger for at kjøkkenet ditt alltid er fylt med sesongens nødvendigheter. Du bestiller enkelt via nett, mottar varene i gjenbrukbare beholdere, og rebestiller med et QR-scan. Ved neste levering byttes tomme beholdere ut, vaskes og brukes på nytt. Fram skal være et system for sirkulær forbruk og mindre avfall.
 
-## Setup & Installation
+For ekstra støtte tilbyr Farm en innebygd chatbot som hjelper deg med bestilling, reordering, og praktiske spørsmål underveis. Chatboten gir personlig veiledning, forslag basert på sesongens utvalg, og gjør hele prosessen enda mer brukervennlig.
 
-Describe any necessary setup/installation required, e.g. how to handle OpenAI key, Node if necessary, etc.
+## Oppsett og installasjon
 
-## How to Run Locally
+Det kreves ingen avansert installasjon for å kjøre denne siden lokalt. Prosjektet er bygget med HTML, CSS og JavaScript, og krever kun en moderne nettleser for å vises korrekt. Dersom du ønsker å gjøre endringer i kildekoden, anbefales det å ha Node.js installert for å kunne bruke utviklingsverktøy som for eksempel bundling eller live server. Ingen API-nøkler eller backend-integrasjoner er nødvendig i denne versjonen.
 
-Explain how to actually run the application, e.g. open `index.html` directly in your browser, or Node-related commands if necessary.
+## Slik kjører du lokalt
 
-## Known Limitations
+Last ned prosjektmappen eller klon Git-repositoriet til din lokale maskin.
 
-Mention any known limitations, like no backend or database, and dependence on internet access for API calls.
+Åpne index.html direkte i nettleseren din.
+
+Alternativt, hvis du bruker VS Code eller en annen editor med live server: – Åpne prosjektmappen i editoren – Høyreklikk på index.html og velg “Åpne med Live Server” – Siden åpnes da automatisk i nettleseren
+
+## Kjente begrensninger
+
+Dette er en eksamensoppgave, og en kan ikke handle ting på ekte. Det er ikke mulig å gå inn i handlekurv, eller legge ting inn i handlekurven. 
 
 ## Future Improvements
-
-Your own ideas for expanding the solution, anything from UI improvements to extra features.
