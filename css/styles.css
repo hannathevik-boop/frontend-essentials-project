@@ -414,7 +414,6 @@ padding-bottom: 90px;
     font-size: 16px;
     padding: 0 1rem 2rem;
   }
-  }
 
   .card-section::before {
     top: 50%;
@@ -426,7 +425,6 @@ padding-bottom: 90px;
     outline: 1px;
   }
 
-}
 .card button, .card-2 button {
   background-color: #DC4131;
   color: white;
@@ -443,7 +441,8 @@ padding-bottom: 90px;
 .card button:hover, .card-2 button:hover {
   background-color: #b83226;
 }
-}
+ }
+
 .how-it-works {
   background-color: #F7F2DE;
   padding: 0rem;
