@@ -2,7 +2,7 @@
 
 ## Prosjektbeskrivelse
 
-Farm er en bærekraftig dagligvaretjeneste som sørger for at kjøkkenet ditt alltid er fylt med sesongens nødvendigheter. Du bestiller enkelt via nett, mottar varene i gjenbrukbare beholdere, og rebestiller med et QR-scan. Ved neste levering byttes tomme beholdere ut, vaskes og brukes på nytt. Fram skal være et system for sirkulær forbruk og mindre avfall.
+Fram er en bærekraftig dagligvaretjeneste som sørger for at kjøkkenet ditt alltid er fylt med sesongens nødvendigheter. Du bestiller enkelt via nett, mottar varene i gjenbrukbare beholdere, og rebestiller med et QR-scan. Ved neste levering byttes tomme beholdere ut, vaskes og brukes på nytt. Fram skal være et system for sirkulær forbruk og mindre avfall.
 
 For ekstra støtte tilbyr Farm en innebygd chatbot som hjelper deg med bestilling, reordering, og praktiske spørsmål underveis. Chatboten gir personlig veiledning, forslag basert på sesongens utvalg, og gjør hele prosessen enda mer brukervennlig.
 

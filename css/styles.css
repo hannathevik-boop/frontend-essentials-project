@@ -500,9 +500,9 @@ gap: 10px;
   gap: 7rem;
   align-items: center;
   padding-bottom: 3rem;
-  padding-left: 10rem;
+  padding-left: 5rem;
   border-top: 1px solid black;
-padding-right: 30rem;
+  padding-right: 10rem;
 }
 
 .step-article h3 {
@@ -513,7 +513,7 @@ padding-right: 30rem;
   text-transform: uppercase;
 text-align: left;
   white-space: nowrap;
-  padding-left: -20rem;
+
 }
 
 .step-article p {
@@ -806,7 +806,6 @@ font-size: 24px;
 
 .newsletter-text {
   max-width: 407px;
-  font-size: 24px;
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
   line-height: 28px;
@@ -824,7 +823,6 @@ font-size: 24px;
 }
 
 .form-group {
-  width: 459px;
   margin-bottom: 1rem;
 }
 
@@ -854,7 +852,7 @@ font-size: 24px;
 
 /* === Responsiv justering === */
 @media (max-width: 768px) {
-  .newsletter, .newsletter-form, .form-group {
+  .newsletter, .newsletter-form, .form-group, .newsletter-form button {
     padding-left: 1rem;
     padding-right: 1rem;
     
@@ -868,20 +866,14 @@ font-size: 24px;
 }
 
   .newsletter-text {
-  
     font-size: 16px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
 padding-left: 1rem;
   }
   .newsletter-subheading {
-
     font-size: 24px;
     padding-left: 1rem;
 }
   .form-group {
-  
     display: flex;
 height: 44px;
 padding: 10px;
@@ -889,10 +881,7 @@ align-items: center;
 gap: 10px;
 align-self: stretch;
 padding-left: 0rem;
-}
-  .newsletter-form button {
 
-    
   }
   }
 
