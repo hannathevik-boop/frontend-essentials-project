@@ -697,7 +697,7 @@ font-size: 24px;
   .produce-card {
     padding: 1rem;
   }
-.image-wrapper {
+.image-wrapper img {
   width: 250px;
   height: 321px;
   object-fit: cover;
@@ -747,6 +747,7 @@ font-size: 24px;
     align-items: center;
     gap: 1rem;
     margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .slider-track {
@@ -773,6 +774,7 @@ font-size: 24px;
     cursor: pointer;
     color: #0B0A08;
     margin-top: -6rem;
+
   }
 
 }
