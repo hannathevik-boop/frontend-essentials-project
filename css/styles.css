@@ -28,7 +28,6 @@ padding-bottom: 16px;
 width: 100%;
 }
 
-/* Nav høyre */
 .nav-right {
   flex: 0 0 auto;
   display: flex;
