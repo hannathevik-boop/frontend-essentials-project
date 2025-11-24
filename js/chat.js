@@ -153,7 +153,7 @@ function addMessage(content, sender = true) {
 
   chatBox.insertBefore(message, inputArea);
   chatBox.scrollTop = chatBox.scrollHeight;
-  return message; // 👈 gjør at du kan manipulere meldingen senere
+  return message; // gjør at du kan manipulere meldingen senere
 }
 
 sendButton.addEventListener('click', () => {

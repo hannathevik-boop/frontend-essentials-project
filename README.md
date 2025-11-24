@@ -20,6 +20,39 @@ Alternativt, hvis du bruker VS Code eller en annen editor med live server: – �
 
 ## Kjente begrensninger
 
-Dette er en eksamensoppgave, og en kan ikke handle ting på ekte. Det er ikke mulig å gå inn i handlekurv, eller legge ting inn i handlekurven. 
+Dette er en eksamensoppgave, og det er ikke mulig å handle varer på ekte. Man kan derfor ikke gå inn i handlekurven eller legge produkter inn i den. Chat‑funksjonen er en demonstrasjon og ikke koblet til et reelt kundesystem.
 
-## Future Improvements
+
+## Chat Features
+Send messages: Brukermeldinger vises i blå bobler.
+
+Bot replies: Bot‑meldinger vises med avatar og beige boble.
+
+Loading state: Tre animerte prikker vises mens man venter på svar.
+
+Disconnect state: Bot kan signalisere når chatten er avsluttet.
+
+Bruk av API‑nøkkel
+For å kjøre chatten må man ha en gyldig API‑nøkkel fra OpenAI. Nøkkelen er personlig og skal ikke deles i koden eller dokumentasjonen.
+
+Eksempel på hvordan chatten kan startes med nøkkel (uten å vise selve nøkkelen):
+
+javascript
+const apiKey = "DIN_API_NØKKEL_HER"; // nøkkelen må eier selv legge inn
+
+async function sendMessageToBot(userMessage) {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + apiKey
+    },
+    body: JSON.stringify({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: userMessage }]
+    })
+  });
+
+  const data = await response.json();
+  return data.choices[0].message.content;
+}

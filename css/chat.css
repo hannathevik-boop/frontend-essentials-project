@@ -231,6 +231,7 @@ word-wrap: break-word
   padding-top: 6rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 12px;
+  padding-bottom: -1rem;
 }
 
 .chat-box {
@@ -321,7 +322,6 @@ word-wrap: break-word
   gap: 0.5rem;
   margin-top: auto;
   align-items: flex-end;
-   margin-bottom: 1rem;
 }
 
 #chat-input {
@@ -335,6 +335,7 @@ word-wrap: break-word
   outline: none; 
   width: 411px;
   height: 69px;
+  
 }
 
 #send-button {
@@ -353,6 +354,8 @@ word-wrap: break-word
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  margin-bottom: 0.7rem;
+  
 
 }
 
@@ -376,7 +379,7 @@ word-wrap: break-word
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .chat-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -396,7 +399,8 @@ word-wrap: break-word
     font-size: 16px; 
   }
   .hero-img { 
-    height: 579px; }
+    height: 579px; 
+  }
 }
 
 /* Typografi */
@@ -418,4 +422,58 @@ h4 {
   font-size: 36px;
   font-family: Arimo;
  } 
+ .demo {
+  padding: 3rem;
+   }
+ input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+    /* Imperial gold - For the Emporer!!! */
+    border: 1px solid #f9d648;
+    background: #ffffff15;
+    color: #ffffff;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #f9d648;
+    background: #f9d648;
+    color: #001b57;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+pre {
+    background: #00000025;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+    white-space: pre-wrap;
+    border: 1px solid #f9d64835;
+}
+
+#lore-note {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .demo {
+  padding-top: 15rem;
+}
+}
