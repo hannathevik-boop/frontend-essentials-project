@@ -26,7 +26,7 @@ img {
   padding-top: 16px;
 padding-bottom: 16px;
 width: 100%;
-z-index: 3000;
+z-index: 2000;
 background-color: #F7F2DE;
 
 }
@@ -35,7 +35,7 @@ background-color: #F7F2DE;
 .nav-right {
   flex: 0 0 auto;
   display: flex;
-  align-items: right;
+ align-items: flex-end;
   padding-right: 2rem;
 }
 /* banner logo øverts*/
@@ -47,7 +47,6 @@ background-color: #F7F2DE;
   font-size: 32px;
   text-transform: uppercase;
   color: #1B1A1E;
-z-index: 2000;
   margin-top: -0.9rem;
   text-decoration: none;
 
@@ -76,7 +75,7 @@ z-index: 2000;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 4001;
   margin-left: 2rem;
 }
 
@@ -90,7 +89,10 @@ z-index: 2000;
   background-color: #1B1A1E;
   border-radius: 2px;
   transition: background-color 0.5s ease;
-}
+  display: block;
+  margin: 3px 0;
+
+  }
 .popover-menu {
   position: absolute;
   top: 0;
@@ -115,14 +117,6 @@ z-index: 2000;
   opacity: 1;
   pointer-events: auto;
   }
-  .popover-logo { 
-    display: none; 
-    font-family: 'Frank Ruhl Libre', serif; font-size: 32px; 
-    text-transform: uppercase; 
-    color: black; 
-    text-align: center; 
-    margin-top: 1rem; 
-}
 
 .popover-menu::before {
   content: "";
@@ -133,15 +127,6 @@ z-index: 2000;
   margin-top: 2.6rem;
   position: absolute;
   transform: translateX(-0.5px);
-}
-.popover-logo {
-  display: flex;
-  font-family: 'Frank Ruhl Libre', serif;
-  font-size: 32px;
-  text-transform: uppercase;
-  color: black;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 .close-menu {

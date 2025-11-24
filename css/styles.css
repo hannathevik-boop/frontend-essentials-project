@@ -854,12 +854,13 @@ font-size: 24px;
   .newsletter, .newsletter-form, .form-group, .newsletter-form button {
     padding-left: 1rem;
     padding-right: 1rem;
+     width: 100%;
     
   }
-  .newsletter-form,
-.form-group,
-.form-group input,
-.newsletter-form button {
+  .newsletter-form button {
+    width: 97%;
+    }
+.form-group input,{
   width: 100%;
   max-width: 459px;
 }
@@ -867,6 +868,7 @@ font-size: 24px;
   .newsletter-text {
     font-size: 16px;
 padding-left: 1rem;
+width: 80%;
   }
   .newsletter-subheading {
     font-size: 24px;
@@ -880,7 +882,9 @@ align-items: center;
 gap: 10px;
 align-self: stretch;
 padding-left: 0rem;
-
+ }
+ .newsletter-logo {
+padding-left: 1rem;
   }
   }
 

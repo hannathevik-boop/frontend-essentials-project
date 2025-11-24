@@ -21,9 +21,10 @@ img {
   align-items: center;
   position: relative;
   border-bottom: 1px solid #0B0A08;
-  padding-top: 16px;
+  padding-top: 16.1px;
 padding-bottom: 16px;
 width: 100%;
+
 }
 .nav-right {
   flex: 0 0 auto;
@@ -40,7 +41,6 @@ width: 100%;
   font-size: 24px;
   text-transform: uppercase;
   color: #1B1A1E;
-  z-index: 9999;
   margin-top: 1.5rem;
   text-decoration: none;
 
@@ -109,14 +109,6 @@ width: 100%;
   opacity: 1;
   pointer-events: auto;
   }
-  .popover-logo { 
-    display: none; 
-    font-family: 'Frank Ruhl Libre', serif; font-size: 32px; 
-    text-transform: uppercase; 
-    color: black; 
-    text-align: center; 
-    margin-top: 1rem; 
-}
 
 .popover-menu::before {
   content: "";
@@ -127,15 +119,6 @@ width: 100%;
   margin-top: 2.6rem;
   position: absolute;
   transform: translateX(-0.5px);
-}
-.popover-logo {
-  display: flex;
-  font-family: 'Frank Ruhl Libre', serif;
-  font-size: 32px;
-  text-transform: uppercase;
-  color: black;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 .close-menu {
@@ -497,9 +480,6 @@ width: 100%;
     max-width: 100%;
     height: auto;
   }
-}
-
-@media (max-width: 768px) {
   .newsletter, .newsletter-form, .form-group {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -530,4 +510,12 @@ align-self: stretch;
 padding-left: 0rem;
     
   }
+  .newsletter-logo {
+padding-left: 1rem;
   }
+  }
+
+  .newsletter-logo {
+    font-size: 48px;
+  }
+  
