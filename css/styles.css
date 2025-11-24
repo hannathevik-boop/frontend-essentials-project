@@ -135,9 +135,8 @@ width: 100%;
   z-index: 1001;
   color: #0B0A08;
 font-size: 24px;
-font-family: Font Awesome 6 Pro;
+font-family: 'Font Awesome 6 Pro';
 font-weight: 300;
-word-wrap: break-word
 }
 
 /* Meny */
@@ -195,7 +194,7 @@ word-wrap: break-word
   z-index: 1001;
   color: #0B0A08;
 font-size: 24px;
-font-family: Font Awesome 6 Pro;
+font-family: 'Font Awesome 6 Pro';
 font-weight: 300;
 word-wrap: break-word
   }

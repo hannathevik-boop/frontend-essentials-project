@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Arimo', sans-serif;
   color: #1B1A1E;
@@ -11,13 +10,11 @@ body {
   background-color: #F7F2DE;
   overflow-x: hidden;
 }
-
 img {
   max-width: 100%;
   display: block;
   border-radius: 16px;
 }
-
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -28,15 +25,13 @@ img {
 padding-bottom: 16px;
 width: 100%;
 }
-
-/* Nav høyre */
 .nav-right {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   padding-right: 2rem;
 }
-/* banner logo øverts*/
+
 .nav-logo, .nav-logo h2 {
   position: absolute;
   left: 50%;
@@ -152,6 +147,7 @@ width: 100%;
   z-index: 1001;
   font-size: 24px;
   color: #0B0A08;
+  border: none;
 }
 .menu-list {
   list-style: none;

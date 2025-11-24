@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fram – Home delivery from your local farms. Shop seasonal produce and learn how our circular service works." />
+  <title>Fram | Local Farm Delivery</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/chat.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <nav role="navigation" aria-label="Main navigation" class="main-nav">
+      <div class="nav-left">
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="popover-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <h1 class="nav-logo">Fram</h1>
+      <div class="nav-right">
+        <div class="handle-button">
+          <span>0</span>
+        </div>
+      </div>
+    </nav>
+    <!-- Popover Menu -->
+    <div id="popover-menu" class="popover-menu">
+      <button class="close-menu" aria-label="Close menu">×</button>
+      <ul class="menu-list">
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="chat.html">CHAT</a></li>
+       
+        <li><a href="#checkout">CHECKOUT</a></li>
+      </ul>
+    </div>
+  </header>
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+ <section class="hero-section" aria-label="Hero section">
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1713244649594-0c2de54f2eaa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2075" alt="Farm landscape" class="hero-img" />
+    <div class="hero-overlay">
+      <h1 class="hero-title">FRAM</h1>
+      <div class="vertical-line"></div>
+      <p class="hero-subtitle">Home delivery from your local farms</p>
+    </div>
+  </div>
+</section>
+    <h1>OpenAI - Simple Demo</h1>
+    <p>
+        This demo sends a simple request to the OpenAI API and displays the response.
+        <br />
+        Enter your API key, invoke the machine spirit, and witness its output.
+    </p>
+    <input id="key" type="password" placeholder="The Inquisition demands your OpenAI API key..." />
+    <button id="ultramar-button">For the Glory of Ultramar!</button>
+    <pre id="output" hidden></pre>
+    <p id="lore-note">
+        This demo refers to the Warhammer 40k universe, where humanity's early obsession with AI, revered as the
+        <strong>machine spirit</strong> (superstition layered over technology that once involved AI), eventually dooms
+        mankind to endless war and despair. But fear not my brothers and sisters, for the Emperor's angels shall lead
+        His faithful to blessed paradise!
+    </p>
+    <script src="open_ai_demo.js"></script>
+</body>
+</html>
+<script src="js/chat.js" defer></script>
