@@ -67,16 +67,17 @@ background-color: #F7F2DE;
   
 }
 .hamburger {
-  display: block;
+  z-index: 9999;
+  padding: 0rem;
+   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 28px;
   height: 20px;
   background: none;
   border: none;
   cursor: pointer;
   margin-left: 2rem;
-  z-index: 9999;
 }
 
 .hamburger .bar {
