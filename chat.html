@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fram – Home delivery from your local farms. Shop seasonal produce and learn how our circular service works." />
+  <meta name="description"
+    content="Fram – Home delivery from your local farms. Shop seasonal produce and learn how our circular service works." />
   <title>Fram | Local Farm Delivery</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
@@ -24,9 +27,9 @@
           <span class="bar"></span>
         </button>
       </div>
-       <a href="index.html" class="nav-logo">
-  <h1>Fram</h1>
-</a>
+      <h1 class="nav-logo">
+        <a href="index.html">Fram</a>
+      </h1>
       <div class="nav-right">
         <div class="handle-button">
           <span>0</span>
@@ -45,52 +48,52 @@
     </div>
   </header>
   <section class="chat-container">
-  <div class="chat-box">
-    <!-- Chat UI -->
-    <div class="chat-message receiver">
-      <h2 class="chat-avatar">Fram</h2>
-      <div class="bubble">What can I help you with today?</div>
-    </div>
-    <div class="chat-message sender">I want to know more about the farms you work with.</div>
-    <div class="chat-input-area">
-      <input type="text" id="chat-input" placeholder="Type your message..." />
-      <button id="send-button" type="button">
-        <!-- ikon -->
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M7.53125 0.25L12.7812 5.75C13.0625 6.0625 13.0625 6.53125 12.75 6.8125C12.4375 7.09375 11.9688 7.09375 11.6875 6.78125L7.75 2.625V13.25C7.75 13.6875 7.40625 14 7 14C6.5625 14 6.25 13.6875 6.25 13.25V2.625L2.28125 6.78125C2 7.09375 1.53125 7.09375 1.21875 6.8125C0.90625 6.53125 0.90625 6.03125 1.1875 5.75L6.4375 0.25C6.59375 0.09375 6.78125 0 7 0C7.1875 0 7.375 0.09375 7.53125 0.25Z" fill="white"/>
-</svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<main id="main-content" role="main">
-  <section class="hero-section" aria-label="Hero section">
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1713244649594-0c2de54f2eaa?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=2075"
-           alt="Farm landscape" class="hero-img" />
+    <div class="chat-box">
+      <!-- Chat UI -->
+      <div class="chat-message receiver">
+        <h2 class="chat-avatar">Fram</h2>
+        <div class="bubble">What can I help you with today?</div>
+      </div>
+      <div class="chat-message sender">I want to know more about the farms you work with.</div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type your message..." />
+        <button id="send-button">
+          <svg class="arrow-icon" width="14" height="14" viewBox="0 0 14 14">
+            <path
+              d="M7.53125 0.25L12.7812 5.75C13.0625 6.0625 13.0625 6.53125 12.75 6.8125C12.4375 7.09375 11.9688 7.09375 11.6875 6.78125L7.75 2.625V13.25C7.75 13.6875 7.40625 14 7 14C6.5625 14 6.25 13.6875 6.25 13.25V2.625L2.28125 6.78125C2 7.09375 1.53125 7.09375 1.21875 6.8125C0.90625 6.53125 0.90625 6.03125 1.1875 5.75L6.4375 0.25C6.59375 0.09375 6.78125 0 7 0C7.1875 0 7.375 0.09375 7.53125 0.25Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
-
-  <section class="demo">
-    <h1>OpenAI - Simple Demo</h1>
-    <p>
+  <main id="main-content" role="main">
+    <section class="hero-section" aria-label="Hero section">
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1713244649594-0c2de54f2eaa?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=2075"
+          alt="Farm landscape" class="hero-img" />
+      </div>
+    </section>
+    <section class="demo">
+      <h1>OpenAI - Simple Demo</h1>
+      <p>
         This demo sends a simple request to the OpenAI API and displays the response.
         <br />
         Enter your API key, invoke the machine spirit, and witness its output.
-    </p>
-    <input id="key" type="password" placeholder="The Inquisition demands your OpenAI API key..." />
-    <button id="ultramar-button">For the Glory of Ultramar!</button>
-    <pre id="output" hidden></pre>
-    <p id="lore-note">
+      </p>
+      <input id="key" type="password" placeholder="The Inquisition demands your OpenAI API key..." />
+      <button id="ultramar-button">For the Glory of Ultramar!</button>
+      <pre id="output" hidden></pre>
+      <p id="lore-note">
         This demo refers to the Warhammer 40k universe, where humanity's early obsession with AI, revered as the
         <strong>machine spirit</strong> (superstition layered over technology that once involved AI), eventually dooms
         mankind to endless war and despair. But fear not my brothers and sisters, for the Emperor's angels shall lead
         His faithful to blessed paradise!
-    </p>
-  </section>
-</main>
-
-<script src="js/chat.js" defer></script>
+      </p>
+    </section>
+  </main>
+  <script src="js/chat.js" defer></script>
 </body>
+
 </html>
