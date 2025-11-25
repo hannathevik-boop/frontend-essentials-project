@@ -34,8 +34,7 @@ img {
   align-items: center;
   padding-right: 2rem;
 }
-
-/* banner logo øverts */
+/* banner logo øverts*/
 .nav-logo, .nav-logo h2 {
   position: absolute;
   left: 50%;
@@ -47,24 +46,25 @@ img {
   z-index: 9999;
   margin-top: 1.5rem;
   text-decoration: none;
+
 }
 
 .handle-button {
-  background: #28BD6D;
+ background: #28BD6D;
   border-radius: 16px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 5px;
-  padding-top: 5px;
+  padding-top: 5px;;
   font-family: 'Arimo', sans-serif;
   font-size: 14px;
   color: black;
-  gap: 10px;
+  gap: 10px; 
   display: inline-flex;
 }
 
 .nav-left {
-  flex: 0 0 auto;
+  flex: 0 0 auto; 
 }
 
 .hamburger {
@@ -106,21 +106,10 @@ img {
   align-items: center;
   padding: 2rem;
   gap: 3rem;
-  z-index: 1000;
+  z-index: 5000;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-}
-
-.popover-menu::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: black;
-  margin-top: 2.6rem;
-  position: absolute;
-  transform: translateX(-0.5px);
 }
 
 .popover-menu.active {
@@ -129,25 +118,34 @@ img {
   pointer-events: auto;
 }
 
-/* close button */
+.popover-menu::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 2rem;
+  position: absolute;
+  transform: translateX(-0.5px);
+}
+
 .close-menu {
   position: absolute;
-  top: 1.5rem;
-  left: 1rem;
+  top: 1rem;
+  left: 2rem;
   background: none;
-  border: none;
   cursor: pointer;
   z-index: 1001;
+  font-size: 32px;
   color: #0B0A08;
-  font-size: 24px;
-  font-family: 'Font Awesome 6 Pro';
-  font-weight: 300;
+  border: none;
+  font-weight: 200;
 }
 
 /* Meny */
 .menu-list {
   list-style: none;
-  padding-top: 12rem;
+  padding-top: 16rem;
   width: 100%;
   text-align: center;
 }
@@ -171,6 +169,10 @@ img {
 .menu-list a:hover {
   text-decoration: underline;
 }
+.checkout-item {
+  margin-top: 20rem;
+}
+
 
 @media (max-width: 768px) {
   .popover-menu {
@@ -187,21 +189,9 @@ img {
   .menu-list a {
     font-size: 1.75rem;
   }
-
-  .close-menu {
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    color: #0B0A08;
-    font-size: 24px;
-    font-family: 'Font Awesome 6 Pro';
-    font-weight: 300;
-    word-wrap: break-word;
-  }
+    .checkout-item {
+     margin-top: 15rem;
+}
 }
 
 h1, h2, h3 {
@@ -243,14 +233,14 @@ h4 {
 
 .hero-img {
   width: 100%;
-  height: 1110px;
+  height: 850px;
   flex-shrink: 0;
   object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 165px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -269,9 +259,10 @@ h4 {
 
 .vertical-line {
   width: 2px;
-  height: 300px;
+  height: 200px;
   background-color: white;
-  margin-bottom: 3.5rem;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
 }
 
 .hero-subtitle {
@@ -283,7 +274,6 @@ h4 {
   color: white;
   line-height: 1.2;
 }
-
 @media (max-width: 768px) {
   .hero-img {
     height: 579px;
@@ -407,7 +397,7 @@ h4 {
     object-fit: cover;
   }
 
-  .card-section {
+ .card-section {
     flex-direction: column;
     padding: 0 1rem;
   }
@@ -439,28 +429,28 @@ h4 {
     outline: 1px;
   }
 
-  .card button, .card-2 button {
-    background-color: #DC4131;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 0rem;
-    width: 90%;
-    height: 44px;
-  }
-
-  .card button:hover, .card-2 button:hover {
-    background-color: #b83226;
-  }
+.card button, .card-2 button {
+  background-color: #DC4131;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0rem;
+  width: 90%;
+  height: 44px;
 }
+
+.card button:hover, .card-2 button:hover {
+  background-color: #b83226;
+}
+ }
 
 .how-it-works {
   background-color: #F7F2DE;
   padding: 0rem;
-  outline: 1px solid black;
+   outline: 1px solid black;
 }
 
 .how-intro h2 {
@@ -483,19 +473,20 @@ h4 {
   width: 100%;
   justify-content: space-between;
   align-items: stretch;
+
 }
 
 .how-intro {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;         
   text-align: center;
   flex: 0 0 550px;
   border-right: 1px solid black;
   border-top: 1px solid black;
 }
 
-/* høyre artikler */
+/* høyre artikler*/
 .article-grid {
   flex-direction: column;
   grid-template-columns: repeat(2, 1fr);
@@ -504,7 +495,7 @@ h4 {
   gap: 3rem;
 }
 
-/* Individuell artikkel */
+/* Individuell artikkel*/
 .step-article {
   position: relative;
   padding-top: 3rem;
@@ -534,7 +525,7 @@ h4 {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1; 
   padding-left: 0rem;
 }
 
@@ -565,9 +556,9 @@ h4 {
     width: 100%;
     padding: 2rem;
     align-items: left;
-  }
+  } 
 
-  .step-wrapper {
+ .step-wrapper {
     grid-template-columns: 1fr;
     border-left: 0px;
     border-right: 0px;
@@ -583,21 +574,22 @@ h4 {
     width: 20rem;
   }
 
-  .step-article p {
-    flex: 1;
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-    word-wrap: break-word;
-    align-items: flex-start;
-  }
+.step-article p {
+  flex: 1;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+  align-items: flex-start;
+}
 
   .how-intro h2 {
     font-size: 24px;
     display: flex;
     justify-content: center;
     width: 70%;
-  }
+    
+}
 }
 
 /*  Popular Produce */
@@ -690,37 +682,37 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
 
+}
 .overlay-button:hover {
   background-color: #008F51;
+  
 }
 
 @media (max-width: 768px) {
-  .popular-produce {
-    background-color: white;
-    padding-top: 90px;
-    padding-bottom: 90px;
-    width: 100%;
-    padding-left: 1rem;
-  }
+.popular-produce {
+  background-color: white;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  width: 100%;
+  padding-left: 1rem;
+}
 
-  .popular-produce h2 {
+.popular-produce h2 {
+  padding: 1rem;
+  width: 100%;
+  font-size: 24px;
+}
+   .produce-card {
     padding: 1rem;
-    width: 100%;
-    font-size: 24px;
   }
 
-  .produce-card {
-    padding: 1rem;
-  }
-
-  .image-wrapper img {
-    width: 250px;
-    height: 321px;
-    object-fit: cover;
-    border-radius: 16px;
-    display: block;
+.image-wrapper img {
+  width: 250px;
+  height: 321px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
   }
 
   .produce-card-row h3, .produce-card-row p {
@@ -793,10 +785,11 @@ h4 {
     cursor: pointer;
     color: #0B0A08;
     margin-top: -6rem;
-  }
-}
 
-/* Newsletter */
+  }
+
+}
+/* Newsletter  */
 .newsletter {
   background-color: #DC4131;
   color: white;
@@ -873,47 +866,47 @@ h4 {
 /* === Responsiv justering === */
 @media (max-width: 768px) {
   .newsletter, .newsletter-form, .form-group, .newsletter-form button {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+    
   }
 
   .newsletter-form button {
     width: 97%;
-  }
+    }
 
-  .form-group input {
-    width: 100%;
-    max-width: 459px;
-  }
+.form-group input {
+  width: 100%;
+  max-width: 459px;
+}
 
   .newsletter-text {
-    font-size: 16px;
-    padding-left: 1rem;
-    width: 80%;
+  font-size: 16px;
+  padding-left: 1rem;
+  width: 80%;
   }
-
   .newsletter-subheading {
     font-size: 24px;
     padding-left: 1rem;
-  }
+}
 
   .form-group {
     display: flex;
-    height: 44px;
-    padding: 10px;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    padding-left: 0rem;
+height: 44px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+padding-left: 0rem;
+ }
+
+ .newsletter-logo {
+padding-left: 1rem;
+  }
   }
 
   .newsletter-logo {
-    padding-left: 1rem;
+    font-size: 48px;
   }
-}
-
-.newsletter-logo {
-  font-size: 48px;
-}
 
