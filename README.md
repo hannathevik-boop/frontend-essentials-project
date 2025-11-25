@@ -8,7 +8,7 @@ For ekstra støtte tilbyr Farm en innebygd chatbot som hjelper deg med bestillin
 
 ## Oppsett og installasjon
 
-Det kreves ingen avansert installasjon for å kjøre denne siden lokalt. Prosjektet er bygget med HTML, CSS og JavaScript, og krever kun en moderne nettleser for å vises korrekt. Dersom du ønsker å gjøre endringer i kildekoden, anbefales det å ha Node.js installert for å kunne bruke utviklingsverktøy som for eksempel bundling eller live server. Ingen API-nøkler eller backend-integrasjoner er nødvendig i denne versjonen.
+Det kreves ingen avansert installasjon for å kjøre denne siden lokalt. Prosjektet er bygget med HTML, CSS og JavaScript, og krever kun en moderne nettleser for å vises korrekt. Dersom du ønsker å gjøre endringer i kildekoden, anbefales det å ha Node.js installert for å kunne bruke utviklingsverktøy som for eksempel bundling eller live server. For å kunne chate med boten , må du ha en OpenAi nøkkel.
 
 ## Slik kjører du lokalt
 
@@ -20,7 +20,7 @@ Alternativt, hvis du bruker VS Code eller en annen editor med live server: – �
 
 ## Kjente begrensninger
 
-Dette er en eksamensoppgave, og det er ikke mulig å handle varer på ekte. Man kan derfor ikke gå inn i handlekurven eller legge produkter inn i den. Chat‑funksjonen er en demonstrasjon og ikke koblet til et reelt kundesystem.
+Dette er en eksamensoppgave, og det er ikke mulig å handle varer på ekte. Man kan derfor ikke gå inn i handlekurven eller legge produkter inn i den. Chat‑funksjonen er en demo fra Open AI og ikke koblet til et ekte kundesystem.
 
 
 ## Chat Features
@@ -35,24 +35,6 @@ Disconnect state: Bot kan signalisere når chatten er avsluttet.
 Bruk av API‑nøkkel
 For å kjøre chatten må man ha en gyldig API‑nøkkel fra OpenAI. Nøkkelen er personlig og skal ikke deles i koden eller dokumentasjonen.
 
-Eksempel på hvordan chatten kan startes med nøkkel (uten å vise selve nøkkelen):
+I implementasjonen lagres ikke samtalene. Meldinger vises kun i brukerens nettleser (DOM) og forsvinner ved oppdatering av siden. Det er ikke lagt inn mekanismer for lagring i localStorage, sessionStorage eller database. API‑nøkkelen brukes kun til autentisering av forespørselen mot OpenAI og lagres ikke i systemet. Dette ivaretar personvern og sikkerhet.
 
-javascript
-const apiKey = "DIN_API_NØKKEL_HER"; // nøkkelen må eier selv legge inn
 
-async function sendMessageToBot(userMessage) {
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer " + apiKey
-    },
-    body: JSON.stringify({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: userMessage }]
-    })
-  });
-
-  const data = await response.json();
-  return data.choices[0].message.content;
-}
