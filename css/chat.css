@@ -410,21 +410,22 @@ h4 {
  } 
  .demo {
   padding: 3rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+    margin-right: auto;
    }
  input {
     width: 300px;
     padding: 8px;
     border-radius: 6px;
-    /* Imperial gold - For the Emporer!!! */
     border: 1px solid #f9d648;
     background: #ffffff15;
     color: #ffffff;
     margin-bottom: 12px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: left;
 }
-
 button {
     padding: 8px 14px;
     border-radius: 6px;
