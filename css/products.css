@@ -17,7 +17,8 @@ img {
   display: block;
   border-radius: 16px;
 }
-
+/* ====
+   nav-seksjon øverst ===== */
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -172,9 +173,11 @@ img {
 .menu-list a:hover {
   text-decoration: underline;
 }
+
 .checkout-item {
   margin-top: 20rem;
 }
+
 h1,
 h2,
 h3 {
@@ -260,6 +263,7 @@ h5 {
   font-size: 20px;
   font-weight: 400;
 }
+
 .kg-row p {
   margin-top: -2rem;
   color: rgba(27, 26, 30, 0.80);
@@ -314,8 +318,9 @@ h5 {
   .produce-card-row p {
     font-size: 24px;
 
+  }
 }
-}
+
 .partnering-farms {
   background-color: #F7F2DE;
   width: 100vw;
@@ -339,7 +344,7 @@ h5 {
   border-right: 1px solid #1B1A1E;
   gap: 10px;
   padding: 3rem;
-  flex: 1;                 
+  flex: 1;
   max-width: 500px;
   height: 600px;
 }
@@ -354,10 +359,10 @@ h5 {
 }
 
 .map-section {
-  flex: 2;   
+  flex: 2;
   padding: 45px;
-  flex-direction: column;  
-  align-items: center;       
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
@@ -368,7 +373,7 @@ h5 {
   border: none;
 }
 
-/* === Newsletter Section === */
+/* === nyhetsbrev-seksjon === */
 .newsletter {
   background-color: #DC4131;
   color: white;
@@ -446,7 +451,7 @@ h5 {
   padding: 0;
   cursor: pointer;
 }
-
+/*===Synlig for skjermlesere ==*/
 .visually-hidden {
   position: absolute;
   left: -9999px;
@@ -474,9 +479,10 @@ h5 {
   .menu-list a {
     font-size: 1.75rem;
   }
-    .checkout-item {
-  margin-top: 15rem;
-}
+
+  .checkout-item {
+    margin-top: 15rem;
+  }
 
   .main-nav {
     display: flex;
@@ -515,7 +521,8 @@ h5 {
     margin-top: 2rem;
 
   }
-
+/* ====
+   kart ===== */
   .map-section {
     justify-content: center;
     width: 100%;
