@@ -1,3 +1,6 @@
+/* =========
+   Reset og base
+==*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,13 +12,17 @@ body {
   color: #1B1A1E;
   line-height: 1.6;
   background-color: #F7F2DE;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Hindrer horisontal scroll ved brede elementer */
 }
 
 img {
   max-width: 100%;
-  display: block;
+  display: block; /* Fjerner inline-gap rundt bilder */
 }
+
+/* ====
+   Header og navigasjon
+===========*/
 .site-header {
   position: relative;
 }
@@ -26,12 +33,10 @@ img {
   align-items: center;
   position: relative;
   border-bottom: 1px solid #0B0A08;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000; /* Sørger for at nav ligger over andre elementer */
   background-color: #F7F2DE;
-
 }
 
 /* Nav høyre */
@@ -41,28 +46,25 @@ img {
   align-items: flex-end;
   padding-right: 2rem;
 }
-/* banner logo øverts*/
+
+/* Logo sentrert med absolute + transform */
 .nav-logo, .nav-logo a {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Sentraliserer logoen uavhengig av bredde */
   font-family: 'Frank Ruhl Libre', serif;
   font-size: 32px;
   text-transform: uppercase;
   color: #1B1A1E;
   margin-top: 0.3rem;
   text-decoration: none;
-  z-index: 5001;
-  
+  z-index: 5001; /* Ekstra høy z-index for å ligge over alt */
 }
 
 .handle-button {
   background: #28BD6D;
   border-radius: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 5px;
-  padding-top: 5px;;
+  padding: 5px 16px;
   font-family: 'Arimo', sans-serif;
   font-size: 14px;
   color: black;
@@ -72,11 +74,12 @@ img {
 
 .nav-left {
   flex: 0 0 auto;
-  
 }
 
+/* ====
+   Hamburger og popover-meny
+=====*/
 .hamburger {
-  padding: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,22 +89,18 @@ img {
   border: none;
   cursor: pointer;
   margin-left: 2rem;
+  padding: 0rem;
 }
 
 .hamburger .bar {
-  display: block;
   height: 3px;
   width: 100%;
   background-color: #1B1A1E;
   border-radius: 2px;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; /* Smooth hover-effekt */
 }
 
-
-.hamburger:hover {
-  opacity: 0.4;
-
-}
+.hamburger:hover { opacity: 0.4; }
 
 .popover-menu {
   position: absolute;
@@ -110,25 +109,26 @@ img {
   width: 475px;
   height: 918px;
   background-color: #28BD6D;
-  display: none;
+  display: none; /* Skjult som default */
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
   gap: 3rem;
   z-index: 1001;
-  opacity: 0;
+  opacity: 0; /* Kombinert med pointer-events: none for å deaktivere */
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Fade-in/out */
 }
 
 .popover-menu.active {
-  display: flex;
+  display: flex; /* Vises når klassen .active settes via JS */
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto; /* Gjør elementet klikkbart igjen */
 }
 
 .popover-menu::before {
+  /* Dekorativ linje øverst i menyen */
   content: "";
   display: block;
   width: 100%;
@@ -136,7 +136,6 @@ img {
   background-color: black;
   margin-top: 2rem;
   position: absolute;
-  transform: translateX(-0.5px);
 }
 
 .close-menu {
@@ -159,9 +158,7 @@ img {
   text-align: center;
 }
 
-.menu-list li {
-  width: 100%;
-}
+.menu-list li { width: 100%; }
 
 .menu-list a {
   font-size: 36px;
@@ -175,15 +172,14 @@ img {
   line-height: 36px;
 }
 
-.menu-list a:hover {
-  text-decoration: underline;
-}
-.checkout-item {
-  margin-top: 20rem;
-}
+.menu-list a:hover { text-decoration: underline; }
 
+.checkout-item { margin-top: 20rem; }
+
+/* ========
+   Responsiv meny
+============ */
 @media (max-width: 768px) {
-
   .popover-menu {
     position: fixed;
     width: 100vw;
@@ -195,31 +191,28 @@ img {
     max-width: none;
   }
 
-  .menu-list a {
-    font-size: 1.75rem;
-  }
-  .checkout-item {
-  margin-top: 15rem;
-}
+  .menu-list a { font-size: 1.75rem; }
+  .checkout-item { margin-top: 15rem; }
 }
 
-/* CHAT */
+/* =======
+   Chat-komponent
+========== */
 .chat-container {
   position: absolute;
   top: 20%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Sentraliserer containeren horisontalt */
   width: 508px;
   height: 716px;
   background-color: white;
-  z-index: 800;
+  z-index: 800; /* Ligger under nav, men over bakgrunn */
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 12px;
-  padding-bottom: -1rem;
 }
 
 .chat-box {
@@ -229,7 +222,7 @@ img {
   flex-direction: column;
   gap: 1rem;
   height: 100%;
-  overflow-y: auto; 
+  overflow-y: auto; /* Scroll når meldinger overstiger høyden */
 }
 
 .chat-message {
@@ -275,30 +268,24 @@ img {
   max-width: 80%;
   font-size: 16px;
   line-height: 1.4;
-  align-self: flex-end;
+  align-self: flex-end; /* Plasserer sender-meldinger til høyre */
   font-family: 'Arimo';
 }
 
+/* Typing dots-animasjon */
 .bubble.loading {
   display: flex;
   gap: 4px;
 }
-
 .bubble.loading span {
   width: 6px;
   height: 6px;
   background-color: #0B0A08;
   border-radius: 50%;
-  animation: blink 1.2s infinite;
+  animation: blink 1.2s infinite; /* Evig blink-animasjon */
 }
-
-.bubble.loading span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.bubble.loading span:nth-child(3) {
-  animation-delay: 0.4s;
-}
+.bubble.loading span:nth-child(2) { animation-delay: 0.2s; }
+.bubble.loading span:nth-child(3) { animation-delay: 0.4s; }
 
 @keyframes blink {
   0% { opacity: 0.2; }
@@ -306,6 +293,9 @@ img {
   100% { opacity: 0.2; }
 }
 
+/* =======
+   Chat input og send-knapp
+====== */
 .chat-input-area {
   display: flex;
   gap: 0.5rem;
@@ -362,7 +352,8 @@ img {
 
 #send-button:hover::after {
   width: 30px;
-  height: 30px;              
+  height: 30px; 
+  color: #DC4131;              
 }
 
 #send-button .arrow-icon {
@@ -370,10 +361,11 @@ img {
   z-index: 3;
 }
 #send-button.loading .arrow-icon {
-  display: none;
+  display: none; /* Skjuler pilen når knappen er i "loading"-state */
 }
 
 #send-button.loading::after {
+  /* Viser en ✕ i stedet for pil når loading */
   content: "✕";
   font-size: 15px;
   color: white; 
@@ -385,7 +377,9 @@ img {
   z-index: 3;
 }
 
-/* HERO SECTION */
+/* =======
+   Hero-seksjon
+============= */
 .hero-section { 
   width: 100%; 
   overflow: hidden; 
@@ -401,12 +395,13 @@ img {
 .hero-img { 
   width: 100%; 
   height: 850px; 
-  object-fit: cover; 
+  object-fit: cover; /* Sørger for at bildet fyller container uten å forvrenge */
 }
 
-/* RESPONSIVE */
+/* ====
+   Responsiv tilpasning
+====== */
 @media (max-width: 768px) {
-
   .chat-container {
     position: absolute;
     top: 0;
@@ -425,16 +420,14 @@ img {
     max-height: 100%;
   }
 
-  .chat-message { 
-    font-size: 16px; 
-  }
+  .chat-message { font-size: 16px; }
 
-  .hero-img { 
-    height: 579px; 
-  }
+  .hero-img { height: 579px; }
 }
 
-/* Typografi */
+/* =======
+   Typografi
+============= */
 h1, h2, h3 {
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
@@ -454,6 +447,9 @@ h4 {
   font-family: Arimo;
 } 
 
+/* ======
+   Demo-seksjon og inputs
+======= */
 .demo {
   padding: 3rem;
   text-align: left;
@@ -471,7 +467,6 @@ input {
   color: #ffffff;
   margin-bottom: 12px;
   display: block;
-  justify-content: left;
 }
 
 button {
@@ -498,7 +493,7 @@ pre {
   color: #ffffff;
   font-size: 14px;
   text-align: left;
-  white-space: pre-wrap;
+  white-space: pre-wrap; /* Bevarer linjeskift, men bryter lange linjer */
   border: 1px solid #f9d64835;
 }
 
@@ -508,8 +503,9 @@ pre {
   margin-top: 0.5rem;
 }
 
+/* =======
+   Responsiv demo
+======== */
 @media (max-width: 768px) {
-  .demo {
-  padding-top: 15rem;
-}
+  .demo { padding-top: 15rem; }
 }
