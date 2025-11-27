@@ -83,6 +83,30 @@ document.addEventListener('DOMContentLoaded', () => {
     chatBox.scrollTop = chatBox.scrollHeight;
     return message;
   }
+  function showLoading() {
+  sendButton.classList.add("loading");
+  const message = document.createElement('div');
+  message.classList.add('chat-message','receiver');
+
+  const avatar = document.createElement('h2');
+  avatar.classList.add('chat-avatar');
+  avatar.textContent = 'Fram';
+
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble','loading');
+  bubble.innerHTML = '<span></span><span></span><span></span>';
+
+  message.appendChild(avatar);
+  message.appendChild(bubble);
+  chatBox.insertBefore(message, inputArea);
+  chatBox.scrollTop = chatBox.scrollHeight;
+  return message;
+}
+
+function resetSendButton() {
+  sendButton.classList.remove("loading");
+}
+
 
   function getLocalInfo(userMessage) {
     const msg = userMessage.toLowerCase();
@@ -153,13 +177,22 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPages().then(() => {
    
     sendButton.addEventListener('click', () => {
-      const text = input.value.trim();
-      if (!text) return;
-      addMessage(text, true);
-      input.value = '';
-      const reply = getLocalInfo(text);
-      addMessage(reply, false);
-    });
+  const text = input.value.trim();
+  if (!text) return;
+  addMessage(text, true);
+  input.value = '';
+
+  // Vis loading-boblen
+  const loadingBubble = showLoading();
+
+  // Simuler "tenketid" eller vent på svar
+  setTimeout(() => {
+    const reply = getLocalInfo(text);
+    chatBox.removeChild(loadingBubble);
+    resetSendButton();
+    addMessage(reply, false);
+  }, 1000);
+});
 
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
