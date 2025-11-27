@@ -170,7 +170,7 @@ function resetSendButton() {
       return "No farm location found.";
     }
 
-    return "I can answer questions about FRAM.";
+    return "I can only answer questions about FRAM.";
   }
 
   // === Start chat when pages are loaded ===
