@@ -325,6 +325,7 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
+  padding-bottom: 2rem;
 }
 
 .card-section::before {
@@ -333,9 +334,9 @@ h4 {
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 0.5px;
+  width: 1px;
   background-color: black;
-  transform: translateX(-0.5px);
+  transform: translateX(1px);
 }
 
 .shop-card h2,
@@ -376,7 +377,7 @@ h4 {
   width: 756px;
   height: 841px;
   padding-top: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 95px;
 }
 
 .shop-card img,
@@ -451,7 +452,6 @@ h4 {
     height: 1px;
     width: 100%;
     transform: translateY(-0.5px);
-    outline: 1px solid black;
   }
 
   .shop-card button,
@@ -560,6 +560,7 @@ h4 {
   font-weight: 400;
   text-decoration: underline;
   word-wrap: break-word;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -828,7 +829,7 @@ h4 {
   margin-bottom: 1rem;
   font-family: 'Frank Ruhl Libre', serif;
   text-transform: uppercase;
-  padding-left: 0rem;
+  display: block;     /* ← sikrer at det oppfører seg som blokk */
 }
 
 .newsletter-subheading {
@@ -1036,7 +1037,6 @@ h4 {
 
   .how-layout {
     flex-direction: column;
-    border-left: 1px solid black;
   }
 
   .how-intro {
