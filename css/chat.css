@@ -425,6 +425,16 @@ img {
   margin-left: -0.4rem;
   z-index: 3;
 }
+.chat-error {
+  color: #DC4131; 
+  font-size: 16px;
+  font-family: 'Arimo', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #DC4131;
+}
+
 
 /* Hero-seksjon */
 .hero-section {

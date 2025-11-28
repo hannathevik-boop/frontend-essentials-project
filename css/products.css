@@ -14,7 +14,6 @@ body {
 
 img {
   max-width: 100%;
-  display: block;
   border-radius: 16px;
 }
 
@@ -558,9 +557,6 @@ h5 {
   }
 }
 
-.newsletter-logo {
-  font-size: 48px;
-}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
@@ -595,4 +591,5 @@ h5 {
   .newsletter-text {
     width: 479px;
     font-size: 20px;
+  }
   }

@@ -16,6 +16,7 @@ img {
   max-width: 100%;
   display: block;
 }
+
 /* ====
    nav-seksjon øverst ===== */
 .main-nav {
@@ -111,12 +112,14 @@ img {
   gap: 3rem;
   z-index: 5000;
   opacity: 0;
-  pointer-events: none; /* ikke klikkbar når skjult */
+  pointer-events: none;
+  /* ikke klikkbar når skjult */
   transition: opacity 0.3s ease;
 }
 
 .popover-menu.active {
-  display: flex; /* vises når .active settes via JS */
+  display: flex;
+  /* vises når .active settes via JS */
   opacity: 1;
   pointer-events: auto;
 }
@@ -244,6 +247,7 @@ h4 {
   flex-shrink: 0;
   object-fit: cover;
 }
+
 /* Hero overlay tekst, FRAM */
 .hero-overlay {
   position: absolute;
@@ -263,6 +267,7 @@ h4 {
   color: white;
   text-transform: uppercase;
 }
+
 /* Vertikal linje mellom titler */
 .vertical-line {
   width: 2px;
@@ -313,6 +318,7 @@ h4 {
     top: 4rem;
   }
 }
+
 /* shop og chat-card */
 .card-section {
   position: relative;
@@ -541,7 +547,8 @@ h4 {
   flex-direction: column;
   flex: 1;
   padding-left: 0rem;
-  line-height: 1.5rem;     /* høyde per linje */
+  line-height: 1.5rem;
+  /* høyde per linje */
   overflow: hidden;
   margin-right: 6rem;
 }
@@ -876,10 +883,12 @@ h4 {
   font-size: 16px;
   cursor: pointer;
 }
-.newsletter-form button:hover{
-  background-color:#008F51;
-  color:white;
+
+.newsletter-form button:hover {
+  background-color: #008F51;
+  color: white;
 }
+
 .visually-hidden {
   position: absolute;
   left: -9999px;
@@ -933,11 +942,9 @@ h4 {
   }
 }
 
-.newsletter-logo {
-  font-size: 48px;
-}
 /* === iPad portrett (skal ligne mobil) === */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
   /* gjenbruk mobilregler */
   .popover-menu {
     position: fixed;
@@ -990,10 +997,16 @@ h4 {
   .chat-card {
     flex: 1 1 100%;
     max-width: 100%;
-  height: 700px;
-  padding-top: 50px;
-  padding-bottom: 2rem;
+    height: 700px;
+    padding-top: 50px;
+    padding-bottom: 2rem;
   }
+
+  .shop-card img,
+  .chat-card img {
+    width: 550px;
+  }
+
   .card-section::before {
     top: 50%;
     left: 0;
@@ -1001,7 +1014,6 @@ h4 {
     height: 1px;
     width: 100%;
     transform: translateY(-0.5px);
-    outline: 1px;
   }
 
   .shop-card h2,
@@ -1026,6 +1038,7 @@ h4 {
     flex-direction: column;
     border-left: 1px solid black;
   }
+
   .how-intro {
     border-right: 0px;
     border-bottom: 0px;
@@ -1040,6 +1053,7 @@ h4 {
     width: 70%;
     text-align: center;
   }
+
   .step-article p {
     font-size: 20px;
   }
@@ -1048,12 +1062,13 @@ h4 {
     font-size: 24px;
     padding: 1rem;
   }
+
   .produce-card {
     padding: 0rem;
   }
 
   .image-wrapper img {
-    width: 350px;
+    width: 450px;
     height: 321px;
     object-fit: cover;
   }
@@ -1075,5 +1090,4 @@ h4 {
 }
 
 /* === iPad landskap (skal ligne desktop) === */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}

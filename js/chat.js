@@ -94,8 +94,30 @@ function resetSendButton() {
   sendButton.classList.remove("loading");
   sendButton.innerHTML = originalSendHTML; // gjenoppretter SVG
 }
+// feilmelding ved tilkoblingsproblemer
+function showConnectionError(message = "Failed to connect. Wait and try again later.") {
+  const errorMsg = document.createElement("div");
+  errorMsg.classList.add("chat-error");
+  errorMsg.textContent = message;
 
-// === Håndterer klikk på send-knappen ===
+  chatBox.insertBefore(errorMsg, inputArea);
+  chatBox.scrollTop = chatBox.scrollHeight;
+   // Fjern feilmeldingen automatisk etter 5 sekunder
+  setTimeout(() => {
+    if (errorMsg.parentNode) {
+      errorMsg.parentNode.removeChild(errorMsg);
+    }
+  }, 5000);
+
+  // Fjern feilmeldingen når brukeren begynner å skrive igjen
+  input.addEventListener("input", () => {
+    if (errorMsg.parentNode) {
+      errorMsg.parentNode.removeChild(errorMsg);
+    }
+  }, { once: true }); // kjør bare én gang
+}
+
+// Håndterer klikk på send-knappen
 sendButton.addEventListener("click", async () => {
   const question = input.value.trim(); // Hent tekst fra input
   if (!question) return;               // Ikke gjør noe hvis feltet er tomt
@@ -109,7 +131,7 @@ sendButton.addEventListener("click", async () => {
   const key = window.OPENAI_API_KEY; // API-nøkkel må være definert i config.js
   if (!key) {
     chatBox.removeChild(loadingMsg);
-    resetSendButton(); // ← tilbake til pil
+    resetSendButton(); // tilbake til pil
     addMessage("Missing API key in config.js", "receiver");
     return;
   }
@@ -139,11 +161,13 @@ sendButton.addEventListener("click", async () => {
     chatBox.removeChild(loadingMsg);
     addMessage(reply, "receiver");
   } catch (err) {
+
     // Hvis noe går galt, fjern loading og vis feilmelding
     chatBox.removeChild(loadingMsg);
-    addMessage("Error: " + err.message, "receiver");
+    showConnectionError("Failed to connect. Wait and try again later.");
+    
   } finally {
-    resetSendButton(); // ← alltid tilbake til pil når ferdig
+    resetSendButton(); // alltid tilbake til pil når ferdig
   }
 });
 
