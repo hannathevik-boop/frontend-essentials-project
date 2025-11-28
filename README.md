@@ -12,7 +12,7 @@ Det kreves ingen avansert installasjon for å kjøre denne siden lokalt. Prosjek
 
 Bruk av API‑nøkkel
 For å kjøre chatten må man ha en gyldig API‑nøkkel fra OpenAI.
-Legg til en linje i config.js med window.OPENAI_API_KEY, med verdien til din egen Open AI API-nøkkel.
+Legg til en linje i config.js i Javascript med window.OPENAI_API_KEY, med din egen Open AI API-nøkkel.
 
 ## Slik kjører du lokalt
 
