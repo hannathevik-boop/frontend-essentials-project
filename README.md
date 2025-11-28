@@ -38,3 +38,4 @@ Disconnect state: Bot kan signalisere når chatten er avsluttet.
 
 I implementasjonen lagres ikke samtalene. Meldinger vises kun i brukerens nettleser (DOM) og forsvinner ved oppdatering av siden. Det er ikke lagt inn mekanismer for lagring i localStorage, sessionStorage eller database. API‑nøkkelen brukes kun til autentisering av forespørselen mot OpenAI og lagres ikke i systemet. Dette ivaretar personvern og sikkerhet.
 
+Chatboten kan ha feil og at den ikke skal brukes til sensitive eller kritiske beslutninger.
