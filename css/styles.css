@@ -59,7 +59,6 @@ img {
   padding-right: 16px;
   padding-bottom: 5px;
   padding-top: 5px;
-  ;
   font-family: 'Arimo', sans-serif;
   font-size: 14px;
   color: black;
@@ -112,12 +111,12 @@ img {
   gap: 3rem;
   z-index: 5000;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; /* ikke klikkbar når skjult */
   transition: opacity 0.3s ease;
 }
 
 .popover-menu.active {
-  display: flex;
+  display: flex; /* vises når .active settes via JS */
   opacity: 1;
   pointer-events: auto;
 }
@@ -245,8 +244,7 @@ h4 {
   flex-shrink: 0;
   object-fit: cover;
 }
-/* ====
-   Hero overlay tekst, FRAM ===== */
+/* Hero overlay tekst, FRAM */
 .hero-overlay {
   position: absolute;
   top: 100px;
@@ -265,7 +263,7 @@ h4 {
   color: white;
   text-transform: uppercase;
 }
-
+/* Vertikal linje mellom titler */
 .vertical-line {
   width: 2px;
   height: 200px;
@@ -315,7 +313,7 @@ h4 {
     top: 4rem;
   }
 }
-
+/* shop og chat-card */
 .card-section {
   position: relative;
   display: flex;
@@ -334,8 +332,8 @@ h4 {
   transform: translateX(-0.5px);
 }
 
-.card h2,
-.card-2 h2 {
+.shop-card h2,
+.chat-card h2 {
   color: #1B1A1E;
   font-size: 36px;
   font-family: Arimo;
@@ -349,8 +347,8 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-.card p,
-.card-2 p {
+.shop-card p,
+.chat-card p {
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
   font-size: 20px;
@@ -363,8 +361,8 @@ h4 {
   padding-right: 2rem;
 }
 
-.card,
-.card-2 {
+.shop-card,
+.chat-card {
   flex: 0 0 50%;
   background-color: #fff;
   text-align: center;
@@ -375,8 +373,8 @@ h4 {
   padding-bottom: 90px;
 }
 
-.card img,
-.card-2 img {
+.shop-card img,
+.chat-card img {
   border-radius: 16px;
   margin: auto;
   width: 448px;
@@ -385,8 +383,8 @@ h4 {
   margin-bottom: 44px;
 }
 
-.card button,
-.card-2 button {
+.shop-card button,
+.chat-card button {
   background-color: #DC4131;
   color: white;
   border: none;
@@ -400,15 +398,15 @@ h4 {
   margin: 0 auto;
 }
 
-.card button:hover,
-.card-2 button:hover {
+.shop-card button:hover,
+.chat-card button:hover {
   background-color: #b83226;
 }
 
 @media (max-width: 768px) {
 
-  .card img,
-  .card-2 img {
+  .shop-card img,
+  .chat-card img {
     width: 100%;
     height: 250px;
     display: block;
@@ -420,22 +418,22 @@ h4 {
     padding: 0 1rem;
   }
 
-  .card,
-  .card-2 {
+  .shop-card,
+  .chat-card {
     flex: 1 1 100%;
     max-width: 100%;
     padding-top: 4rem;
     padding-bottom: 6rem;
   }
 
-  .card h2,
-  .card-2 h2 {
+  .shop-card h2,
+  .chat-card h2 {
     font-size: 24px;
     max-width: 80%;
   }
 
-  .card p,
-  .card-2 p {
+  .shop-card p,
+  .chat-card p {
     font-size: 16px;
     padding: 0 1rem 2rem;
   }
@@ -447,25 +445,18 @@ h4 {
     height: 1px;
     width: 100%;
     transform: translateY(-0.5px);
-    outline: 1px;
+    outline: 1px solid black;
   }
 
-  .card button,
-  .card-2 button {
-    background-color: #DC4131;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 1rem;
-    cursor: pointer;
+  .shop-card button,
+  .chat-card button {
     margin-top: 0rem;
     width: 90%;
     height: 44px;
   }
 
-  .card button:hover,
-  .card-2 button:hover {
+  .shop-card button:hover,
+  .chat-card button:hover {
     background-color: #b83226;
   }
 }
@@ -528,7 +519,7 @@ h4 {
   padding-bottom: 3rem;
   padding-left: 5rem;
   border-top: 1px solid black;
-  padding-right: 10rem;
+  padding-right: 2rem;
   justify-content: center;
 }
 
@@ -550,6 +541,9 @@ h4 {
   flex-direction: column;
   flex: 1;
   padding-left: 0rem;
+  line-height: 1.5rem;     /* høyde per linje */
+  overflow: hidden;
+  margin-right: 6rem;
 }
 
 .step-article a {
@@ -655,7 +649,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  margin: 0;
 }
 
 .produce-card-row {
@@ -670,7 +663,6 @@ h4 {
 .kg-row {
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
   font-weight: 400;
   margin: 0;
   font-size: 20px;
@@ -884,7 +876,10 @@ h4 {
   font-size: 16px;
   cursor: pointer;
 }
-
+.newsletter-form button:hover{
+  background-color:#008F51;
+  color:white;
+}
 .visually-hidden {
   position: absolute;
   left: -9999px;
@@ -940,4 +935,145 @@ h4 {
 
 .newsletter-logo {
   font-size: 48px;
+}
+/* === iPad portrett (skal ligne mobil) === */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* gjenbruk mobilregler */
+  .popover-menu {
+    position: fixed;
+    width: 40vw;
+    height: 60vh;
+    gap: 3rem;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  .menu-list a {
+    font-size: 1.75rem;
+  }
+
+  .checkout-item {
+    margin-top: 10rem;
+  }
+
+  .hero-img {
+    height: 579px;
+  }
+
+  .hero-title {
+    font-size: 75px;
+    margin-top: -1rem;
+  }
+
+  .vertical-line {
+    height: 239px;
+    margin-bottom: 2rem;
+    width: 1px;
+    margin-top: -1.5rem;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    width: 248px;
+  }
+
+  .hero-overlay {
+    top: 4rem;
+  }
+
+  .shop-card,
+  .chat-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  height: 700px;
+  padding-top: 50px;
+  padding-bottom: 2rem;
+  }
+  .card-section::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    transform: translateY(-0.5px);
+    outline: 1px;
+  }
+
+  .shop-card h2,
+  .chat-card h2 {
+    font-size: 24px;
+    max-width: 100%;
+  }
+
+  .shop-card p,
+  .chat-card p {
+    font-size: 20px;
+    padding: 0 1rem 2rem;
+  }
+
+  .shop-card button,
+  .chat-card button {
+    width: 100%;
+    height: 44px;
+  }
+
+  .how-layout {
+    flex-direction: column;
+    border-left: 1px solid black;
+  }
+  .how-intro {
+    border-right: 0px;
+    border-bottom: 0px;
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+    flex: 0 0 200px;
+    padding-top: 1rem;
+  }
+
+  .how-intro h2 {
+    font-size: 24px;
+    width: 70%;
+    text-align: center;
+  }
+  .step-article p {
+    font-size: 20px;
+  }
+
+  .popular-produce h2 {
+    font-size: 24px;
+    padding: 1rem;
+  }
+  .produce-card {
+    padding: 0rem;
+  }
+
+  .image-wrapper img {
+    width: 350px;
+    height: 321px;
+    object-fit: cover;
+  }
+
+  .overlay-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .newsletter-subheading {
+    font-size: 24px;
+    padding-left: 0rem;
+  }
+
+  .newsletter-text {
+    width: 479px;
+    font-size: 20px;
+  }
+}
+
+/* === iPad landskap (skal ligne desktop) === */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }

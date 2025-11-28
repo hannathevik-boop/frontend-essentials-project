@@ -17,6 +17,7 @@ img {
   display: block;
   border-radius: 16px;
 }
+
 /* ====
    nav-seksjon øverst ===== */
 .main-nav {
@@ -25,10 +26,9 @@ img {
   align-items: center;
   position: relative;
   border-bottom: 1px solid #0B0A08;
-  padding-top: 16.1px;
+  padding-top: 16px;
   padding-bottom: 16px;
   width: 100%;
-
 }
 
 .nav-right {
@@ -50,7 +50,6 @@ img {
   margin-top: 1.5rem;
   text-decoration: none;
   z-index: 5001;
-
 }
 
 .handle-button {
@@ -65,12 +64,6 @@ img {
   color: black;
   gap: 10px;
   display: inline-flex;
-}
-
-.nav-left {
-  flex: 0 0 auto;
-
-
 }
 
 .hamburger {
@@ -96,7 +89,6 @@ img {
   border-radius: 2px;
   transition: background-color 0.5s ease;
   z-index: 2000;
-
 }
 
 .popover-menu {
@@ -194,7 +186,7 @@ h1 {
 
 h2 {
   font-size: 36px;
-  color: #ffff;
+  color: #fff;
 }
 
 h3 {
@@ -241,7 +233,7 @@ h5 {
   padding-left: 0rem;
 }
 
-.slider-track {
+.products-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -272,9 +264,6 @@ h5 {
 
 .image-wrapper {
   position: relative;
-  display: inline-block;
-
-
 }
 
 .image-wrapper img {
@@ -282,7 +271,6 @@ h5 {
   border-radius: 16px;
   width: 654px;
   height: 632px;
-  display: inline-block;
 }
 
 .overlay-button {
@@ -311,7 +299,6 @@ h5 {
   .overlay-button {
     padding: 8px 12px;
     font-size: 14px;
-    color: white;
   }
 
   .produce-card-row h5,
@@ -372,6 +359,7 @@ h5 {
   border-radius: 16px;
   border: none;
 }
+
 /* === nyhetsbrev-seksjon === */
 .newsletter {
   background-color: #DC4131;
@@ -416,7 +404,6 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: rem;
 }
 
 .form-group {
@@ -450,6 +437,7 @@ h5 {
   padding: 0;
   cursor: pointer;
 }
+
 /*===Synlig for skjermlesere ==*/
 .visually-hidden {
   position: absolute;
@@ -468,11 +456,6 @@ h5 {
     height: 100vh;
     padding: 3rem 1.5rem;
     gap: 3rem;
-  }
-
-  .popover-menu.active .popover-logo {
-    display: block;
-    margin-top: -2rem;
   }
 
   .menu-list a {
@@ -520,7 +503,8 @@ h5 {
     margin-top: 2rem;
 
   }
-/* ====
+
+  /* ====
    kart ===== */
   .map-section {
     justify-content: center;
@@ -577,3 +561,38 @@ h5 {
 .newsletter-logo {
   font-size: 48px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+  /* gjenbruk mobilregler */
+  .popover-menu {
+    position: fixed;
+    width: 40vw;
+    height: 60vh;
+    gap: 3rem;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  .menu-list a {
+    font-size: 1.75rem;
+  }
+
+  .checkout-item {
+    margin-top: 10rem;
+  }
+
+  .hero-img {
+    height: 1300px;
+  }
+
+  .image-wrapper img {
+    width: 654px;
+    height: 332px;
+  }
+
+  .newsletter-text {
+    width: 479px;
+    font-size: 20px;
+  }

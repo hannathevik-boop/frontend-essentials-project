@@ -47,7 +47,7 @@
   </header>
 
   <main id="main-content" role="main">
-    <!-- Hero Section -->
+    <!-- forside seksjon -->
     <section class="hero-section" aria-label="Hero section">
       <div class="hero-image">
         <img
@@ -60,9 +60,10 @@
         </div>
       </div>
     </section>
-    <!-- CHAT og utvalg -->
+
+    <!-- utvalg av varer-->
     <section class="card-section" aria-labelledby="shop-heading">
-      <div class="card">
+      <div class="shop-card">
         <h2 id="shop-heading">Shop our seasonal selection</h2>
         <p>Updated every week</p>
         <img
@@ -72,7 +73,8 @@
         <button onclick="location.href='products.html'">Browse our selection</button>
       </div>
 
-      <div class="card-2">
+      <!-- chat-->
+      <div class="chat-card">
         <h2>Ask us about anything</h2>
         <p>All your questions answered</p>
         <img
@@ -82,16 +84,16 @@
         <button onclick="location.href='chat.html'">Go to chat</button>
       </div>
     </section>
-    <!--this is how it works-->
 
+    <!--this is how it works-->
     <section class="how-it-works" aria-labelledby="how-heading">
       <div class="how-layout">
-        <!-- Left-side intro block -->
+        <!-- venstre -side intro  -->
         <article class="how-intro">
           <h2 id="how-heading">This is how it works</h2>
         </article>
 
-        <!-- Right-side steps -->
+        <!-- høyre-side steps -->
         <div class="article-grid">
           <div class="step-wrapper">
             <article class="step-article">
@@ -120,12 +122,17 @@
         </div>
       </div>
     </section>
+
+    <!-- populære produkter, galleri på desktop, slide på mobil-->
     <section class="popular-produce" aria-labelledby="popular-heading">
       <h2 id="popular-heading">Popular Produce</h2>
 
+       <!--slide på mobil-->
       <div class="slider-wrapper">
         <button class="slider-btn left" aria-label="Scroll left">&#8592;</button>
         <div class="slider-track">
+
+            <!-- OATS -->
           <article class="produce-card">
             <div class="image-wrapper">
               <img
@@ -147,6 +154,7 @@
             </div>
           </article>
 
+           <!-- red onions -->
           <article class="produce-card">
             <div class="image-wrapper">
               <img
@@ -168,6 +176,7 @@
             </div>
           </article>
 
+           <!-- Garlic-->
           <article class="produce-card">
             <div class="image-wrapper">
               <img
@@ -191,12 +200,15 @@
           </article>
         </div>
 
+ <!-- slider knapp høyre-->
         <button class="slider-btn right" aria-label="Scroll right">&#8594;</button>
       </div>
     </section>
 
   </main>
   <footer>
+
+     <!-- nyhetsbrev -->
     <section class="newsletter" aria-labelledby="newsletter-heading">
       <h1 id="newsletter-heading" class="newsletter-logo">FRAM</h1>
       <h4 class="newsletter-subheading">Stay updated</h4>
@@ -219,7 +231,8 @@
       </form>
     </section>
   </footer>
+   <!-- js koder -->
   <script src="js/script.js" defer></script>
+  <script src="js/menu.js" defer></script>
 </body>
-
 </html>
