@@ -306,6 +306,9 @@ h5 {
     font-size: 24px;
 
   }
+  .products-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 .partnering-farms {
